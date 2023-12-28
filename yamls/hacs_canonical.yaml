@@ -1,0 +1,39 @@
+exp_name: hacs_canonical
+data_root: HACS_DATA
+visualizing_dir: visualizing
+visualizing_save_path: tsm_vis
+model_save_path: models
+feature_save_path: transformed_features
+label_base: evaluation
+visualizing_step : 25
+saving_epoch: 10
+
+projection: identity
+mlp_layer_num: 0
+batch_size: 256
+num_workers: 16
+sampling_duration: 23
+tsm_size: 8
+step: 2
+step_start: 4
+oracle_coef: 16
+in_feature_dim: 2048
+out_feature_dim: 2048
+network_hidden_unit: 512
+kernel_size1: 5
+dilation1: 1
+kernel_size2: 1
+dilation2: 1
+mlphead_hidden_unit: 2048
+dissim_proj_hidden_unit: 512
+dissim_proj_out: 2048
+
+use_dissim_head: true
+epoch: 150
+learning_rate: 0.0001
+
+eval_batch_size: 256
+eval_eval_iter: 100
+eval_lr: 0.01
+eval_momentum: 0.9
+eval_epoch: 16
